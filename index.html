@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Ads Mastery — The Professional Course for Nigerian Entrepreneurs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+<style>
+:root {
+  --navy:    #080e1a;
+  --navy2:   #0d1626;
+  --navy3:   #111d30;
+  --blue:    #1a6bff;
+  --blue2:   #4d8dff;
+  --blue-glow: rgba(26,107,255,0.18);
+  --gold:    #f5c842;
+  --gold2:   #ffd966;
+  --white:   #ffffff;
+  --off:     #e8edf5;
+  --muted:   #7a8ba8;
+  --border:  rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --green:   #00c97a;
+  --red:     #ff4d4d;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── GRID BACKGROUND ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(26,107,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,107,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 0 60px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(8,14,26,0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-badge {
+  width: 32px; height: 32px;
+  background: var(--blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+
+.nav-enroll {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.nav-enroll:hover { background: var(--blue2); transform: translateY(-1px); }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 60px 80px;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -200px; left: 50%;
+  transform: translateX(-20%);
+  width: 900px; height: 700px;
+  background: radial-gradient(ellipse, rgba(26,107,255,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border2);
+  background: rgba(26,107,255,0.08);
+  color: var(--blue2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--blue);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(26,107,255,0.6); }
+  50% { box-shadow: 0 0 0 6px rgba(26,107,255,0); }
+}
+
+.hero-h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(42px, 4.5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.hero-h1 .accent {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--blue2);
+  display: block;
+}
+
+.hero-h1 .highlight {
+  background: linear-gradient(90deg, var(--blue), var(--blue2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+
+.hero-sub strong { color: var(--off); }
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-cta {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 40px rgba(26,107,255,0.3);
+}
+.btn-cta:hover { background: var(--blue2); transform: translateY(-2px); box-shadow: 0 0 60px rgba(26,107,255,0.4); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--off);
+  border: 1px solid var(--border2);
+  padding: 15px 28px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-outline:hover { border-color: var(--blue2); color: var(--blue2); }
+
+.hero-proof {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 48px;
+}
+
+.proof-item { }
+.proof-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+.proof-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ─── HERO CARD STACK ─── */
+.hero-right { position: relative; }
+
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-card {
+  background: var(--navy2);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  padding: 24px 28px;
+  transition: transform 0.3s;
+}
+.info-card:hover { transform: translateX(6px); }
+
+.info-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.info-card-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.info-card-value.blue { color: var(--blue2); }
+.info-card-value.gold { color: var(--gold); }
+.info-card-value.green { color: var(--green); }
+
+.info-card-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.price-card {
+  background: linear-gradient(135deg, rgba(26,107,255,0.15), rgba(26,107,255,0.05));
+  border: 1px solid rgba(26,107,255,0.3);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.price-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.price-old {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.price-badge {
+  background: rgba(245,200,66,0.15);
+  border: 1px solid rgba(245,200,66,0.3);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.price-main {
+  font-family: 'Syne', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.price-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* ─── SECTION SHELLS ─── */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+.section-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.section-header {
+  margin-bottom: 72px;
+}
+
+.section-header.center { text-align: center; }
+
+.s-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue2);
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  border: 1px solid rgba(26,107,255,0.25);
+  border-radius: 4px;
+  background: rgba(26,107,255,0.06);
+}
+
+.s-h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.s-sub {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.section-header.center .s-sub { margin: 0 auto; }
+
+/* ─── PROBLEM STRIP ─── */
+.problem-strip {
+  padding: 60px 0;
+  background: var(--navy2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.problem-strip .section-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+.prob-divider {
+  width: 1px;
+  height: 80px;
+  background: var(--border);
+}
+
+.prob-item {
+  padding: 16px 48px;
+  text-align: center;
+}
+
+.prob-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.prob-item h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+
+.prob-item p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ─── CURRICULUM ─── */
+.curriculum {
+  padding: 120px 0;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.curriculum-nav {
+  position: sticky;
+  top: 100px;
+}
+
+.curriculum-nav-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.c-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 6px;
+  border: 1px solid transparent;
+}
+
+.c-nav-item:hover {
+  background: var(--navy3);
+  border-color: var(--border);
+}
+
+.c-nav-item.active {
+  background: rgba(26,107,255,0.1);
+  border-color: rgba(26,107,255,0.25);
+}
+
+.c-nav-num {
+  width: 28px; height: 28px;
+  border-radius: 7px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.c-nav-item.active .c-nav-num {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+.c-nav-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.c-nav-item.active .c-nav-label,
+.c-nav-item:hover .c-nav-label { color: var(--white); }
+
+.curriculum-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.module-block {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.module-block:hover {
+  border-color: rgba(26,107,255,0.3);
+  box-shadow: 0 0 40px rgba(26,107,255,0.06);
+}
+
+.module-header {
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.module-num-badge {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(26,107,255,0.12);
+  border: 1px solid rgba(26,107,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--blue2);
+  flex-shrink: 0;
+}
+
+.module-title-wrap { flex: 1; }
+
+.module-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+
+.module-meta {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.module-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.module-expand {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s;
+  color: var(--muted);
+}
+
+.module-block.open .module-expand {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+  transform: rotate(45deg);
+}
+
+.module-lessons {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  border-top: 0px solid var(--border);
+}
+
+.module-block.open .module-lessons {
+  max-height: 600px;
+  border-top-width: 1px;
+}
+
+.lesson-list {
+  padding: 8px 0 16px;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 32px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.lesson-item:last-child { border-bottom: none; }
+.lesson-item:hover { background: rgba(255,255,255,0.02); }
+
+.lesson-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.lesson-title {
+  flex: 1;
+  font-size: 14px;
+  color: var(--off);
+  font-weight: 500;
+}
+
+.lesson-dur {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ─── CURRICULUM SUMMARY ─── */
+.curriculum-summary {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sum-card {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.sum-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--blue2);
+  margin-bottom: 6px;
+}
+
+.sum-label {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ─── OUTCOMES ─── */
+.outcomes {
+  padding: 0 0 120px;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--border);
+}
+
+.outcome-cell {
+  background: var(--navy2);
+  padding: 40px 44px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+
+.outcome-cell:hover { background: var(--navy3); }
+
+.outcome-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(26,107,255,0.1);
+  border: 1px solid rgba(26,107,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.outcome-cell h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.outcome-cell p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ─── TESTIMONIALS ─── */
+.testimonials {
+  padding: 120px 0;
+  background: var(--navy2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testi-card {
+  background: var(--navy3);
+  border: 1px solid var(--border2);
+  border-radius: 18px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.testi-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--off);
+  flex: 1;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.testi-result-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,201,122,0.1);
+  border: 1px solid rgba(0,201,122,0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+}
+
+.testi-result-pill .result-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: -0.5px;
+}
+
+.testi-result-pill .result-txt {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.t-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.ta1 { background: linear-gradient(135deg,#1a6bff,#4d8dff); }
+.ta2 { background: linear-gradient(135deg,#00c97a,#00e68a); }
+.ta3 { background: linear-gradient(135deg,#f5c842,#ffd966); color: var(--navy); }
+
+.t-name { font-weight: 600; font-size: 15px; }
+.t-role { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* ─── PRICING ─── */
+.pricing {
+  padding: 120px 0;
+}
+
+.pricing-inner {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 80px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: var(--navy2);
+  border: 1px solid rgba(26,107,255,0.3);
+  border-radius: 24px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(26,107,255,0.08);
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--blue2));
+}
+
+.pricing-card::after {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(26,107,255,0.1), transparent);
+  pointer-events: none;
+}
+
+.curr-toggle {
+  display: flex;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 32px;
+  width: fit-content;
+}
+
+.curr-tab {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.curr-tab.active {
+  background: var(--blue);
+  color: white;
+}
+
+.p-was {
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.p-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.p-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.countdown-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.cdown-block {
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: center;
+  min-width: 60px;
+}
+
+.cdown-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.cdown-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.cdown-sep {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.enroll-cta {
+  width: 100%;
+  background: linear-gradient(135deg, var(--blue), #2e7fff);
+  color: white;
+  border: none;
+  padding: 18px 32px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 0 40px rgba(26,107,255,0.3);
+  margin-bottom: 16px;
+}
+
+.enroll-cta:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(26,107,255,0.45); }
+.enroll-cta:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.secure-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.pricing-features {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--off);
+  line-height: 1.5;
+}
+
+.pf-check {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(0,201,122,0.15);
+  border: 1px solid rgba(0,201,122,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pf-check svg { width: 10px; height: 10px; }
+
+/* ─── PRICING LEFT ─── */
+.pricing-left h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px,3.5vw,46px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.pricing-left p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.include-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.incl-item {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.incl-icon { font-size: 22px; margin-bottom: 10px; }
+
+.incl-item h5 {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.incl-item p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* ─── FAQ ─── */
+.faq {
+  padding: 0 0 120px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faq-item:hover { border-color: var(--border2); }
+
+.faq-q {
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  user-select: none;
+}
+
+.faq-arrow {
+  width: 26px; height: 26px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s;
+  color: var(--muted);
+}
+
+.faq-item.open .faq-arrow {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+  padding: 0 24px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.faq-item.open .faq-a {
+  max-height: 300px;
+  padding: 0 24px 22px;
+}
+
+/* ─── FINAL CTA ─── */
+.final-cta {
+  padding: 120px 0;
+  background: var(--navy2);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 500px;
+  background: radial-gradient(ellipse, rgba(26,107,255,0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.final-cta h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  max-width: 780px;
+  margin: 0 auto 20px;
+}
+
+.final-cta h2 span { color: var(--blue2); }
+
+.final-cta p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy);
+  border-top: 1px solid var(--border);
+  padding: 48px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer p { font-size: 13px; color: var(--muted); }
+
+/* ─── MODAL ─── */
+.modal-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8,14,26,0.88);
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+}
+
+.modal-bg.open { display: flex; }
+
+.modal {
+  background: var(--navy2);
+  border: 1px solid var(--border2);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 48px 44px;
+  position: relative;
+  animation: mIn 0.3s cubic-bezier(0.34,1.4,0.64,1);
+}
+
+@keyframes mIn {
+  from { opacity:0; transform: scale(0.93) translateY(16px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 34px; height: 34px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--muted);
+  transition: all 0.2s;
+}
+.modal-close:hover { color: white; border-color: var(--border2); }
+
+.modal h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin-bottom: 6px;
+}
+
+.modal .m-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.m-curr-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.m-curr {
+  flex: 1;
+  padding: 14px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.m-curr:hover { border-color: var(--border2); }
+
+.m-curr.active {
+  border-color: var(--blue);
+  background: rgba(26,107,255,0.1);
+}
+
+.m-curr-code {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.m-curr.active .m-curr-code { color: var(--blue2); }
+
+.m-curr-amt {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+
+.form-row {
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--off);
+  margin-bottom: 8px;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--navy3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--white);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-row input:focus { border-color: var(--blue); }
+.form-row input::placeholder { color: var(--muted); }
+
+.pay-now {
+  width: 100%;
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 18px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 0 30px rgba(26,107,255,0.25);
+}
+
+.pay-now:hover { background: var(--blue2); transform: translateY(-2px); box-shadow: 0 0 50px rgba(26,107,255,0.4); }
+.pay-now:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.fw-badge {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1100px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .card-stack { display: grid; grid-template-columns: 1fr 1fr; }
+  .price-card { grid-column: span 2; }
+  .curriculum-grid { grid-template-columns: 1fr; }
+  .curriculum-nav { display: none; }
+  .pricing-inner { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 24px 60px; }
+  .section-wrap { padding: 0 24px; }
+  .prob-item { padding: 16px 24px; }
+  .problem-strip .section-wrap { grid-template-columns: 1fr; }
+  .prob-divider { display: none; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .outcomes-grid { grid-template-columns: 1fr; }
+  .curriculum-summary { grid-template-columns: 1fr 1fr; }
+  .include-grid { grid-template-columns: 1fr; }
+  footer { padding: 32px 24px; }
+  .modal { padding: 36px 24px; }
+  .hero-proof { gap: 28px; flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-badge">📘</div>
+    Facebook Ads Mastery
+  </div>
+  <ul class="nav-links">
+    <li><a href="#curriculum">Curriculum</a></li>
+    <li><a href="#outcomes">Outcomes</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+  </ul>
+  <button class="nav-enroll" onclick="openModal()">Enroll Now →</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Professional Course for Nigerian Entrepreneurs</div>
+      <h1 class="hero-h1">
+        Master Facebook Ads.
+        <span class="accent">Scale Your Business.</span>
+        <span class="highlight">Generate Real Revenue.</span>
+      </h1>
+      <p class="hero-sub">
+        A <strong>structured, curriculum-driven course</strong> teaching Nigerian business owners how to plan, build, launch, and optimise Facebook ad campaigns that produce measurable, repeatable results — not guesswork.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-cta" onclick="openModal()">
+          Enroll Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('curriculum').scrollIntoView({behavior:'smooth'})">View Full Curriculum</button>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <div class="proof-num">2,847+</div>
+          <div class="proof-label">Entrepreneurs enrolled</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">8</div>
+          <div class="proof-label">In-depth modules</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">42+</div>
+          <div class="proof-label">Video lessons</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">3.8×</div>
+          <div class="proof-label">Avg. ROI improvement</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="card-stack">
+        <div class="info-card">
+          <div class="info-card-label">Course Format</div>
+          <div class="info-card-value blue">Self-Paced + Live Q&A</div>
+          <div class="info-card-sub">Watch at your own speed · Weekly expert sessions included</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Student Avg. Revenue Increase</div>
+          <div class="info-card-value gold">₦1.2M / month</div>
+          <div class="info-card-sub">Measured across enrolled Nigerian business owners</div>
+        </div>
+        <div class="price-card">
+          <div class="price-card-top">
+            <div class="price-old">Normal price: ₦100,000</div>
+            <div class="price-badge">Save ₦60,000</div>
+          </div>
+          <div class="price-main">₦40,000</div>
+          <div class="price-sub">One-time payment · Lifetime access</div>
+          <button class="btn-cta" style="width:100%;justify-content:center" onclick="openModal()">
+            Enroll at Launch Price
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM STRIP -->
+<div class="problem-strip">
+  <div class="section-wrap">
+    <div class="prob-item">
+      <div class="prob-icon">💸</div>
+      <h4>Wasting Ad Spend</h4>
+      <p>Boosting posts with little return, no targeting strategy, no measurement framework.</p>
+    </div>
+    <div class="prob-divider"></div>
+    <div class="prob-item">
+      <div class="prob-icon">📊</div>
+      <h4>No System Behind It</h4>
+      <p>Running ads without a funnel, a conversion strategy, or a way to scale what works.</p>
+    </div>
+    <div class="prob-divider"></div>
+    <div class="prob-item">
+      <div class="prob-icon">🔁</div>
+      <h4>Unpredictable Revenue</h4>
+      <p>Inconsistent sales month-to-month with no repeatable process to drive growth.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CURRICULUM -->
+<section class="curriculum" id="curriculum">
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="s-tag">Full Curriculum</div>
+      <h2 class="s-h2">Everything you will learn,<br>module by module</h2>
+      <p class="s-sub">8 comprehensive modules covering every phase of Facebook advertising — from fundamentals to advanced scaling. Click any module to explore its lessons.</p>
+    </div>
+
+    <div class="curriculum-grid">
+      <!-- NAV SIDEBAR -->
+      <div class="curriculum-nav">
+        <div class="curriculum-nav-title">Jump to Module</div>
+        <div class="c-nav-item active" onclick="scrollToModule(0)"><div class="c-nav-num">01</div><div class="c-nav-label">Facebook Ads Foundation</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(1)"><div class="c-nav-num">02</div><div class="c-nav-label">Audience Research & Targeting</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(2)"><div class="c-nav-num">03</div><div class="c-nav-label">Ad Creative & Copywriting</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(3)"><div class="c-nav-num">04</div><div class="c-nav-label">Campaign Structure & Launch</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(4)"><div class="c-nav-num">05</div><div class="c-nav-label">Conversion Funnels</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(5)"><div class="c-nav-num">06</div><div class="c-nav-label">Analytics & Optimisation</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(6)"><div class="c-nav-num">07</div><div class="c-nav-label">Retargeting & Retention</div></div>
+        <div class="c-nav-item" onclick="scrollToModule(7)"><div class="c-nav-num">08</div><div class="c-nav-label">Scaling & Advanced Strategy</div></div>
+      </div>
+
+      <!-- MODULES -->
+      <div class="curriculum-content" id="module-list">
+
+        <div class="module-block open" id="mod-0">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">01</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Facebook Ads Foundation</div>
+              <div class="module-meta">
+                <span>📹 5 lessons</span>
+                <span>⏱ 1hr 20min</span>
+                <span>🟢 Beginner</span>
+              </div>
+            </div>
+            <div class="module-expand">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">How Facebook's Ad Algorithm Works in 2024</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Setting Up Business Manager & Ad Account Correctly</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Understanding Campaign Objectives & When to Use Each</div><div class="lesson-dur">16 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Installing & Verifying the Facebook Pixel</div><div class="lesson-dur">14 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">📄</div><div class="lesson-title">Account Setup Checklist (Downloadable)</div><div class="lesson-dur">Reference</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-1">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">02</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Audience Research & Precision Targeting</div>
+              <div class="module-meta">
+                <span>📹 6 lessons</span>
+                <span>⏱ 1hr 45min</span>
+                <span>🟡 Intermediate</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Building Your Ideal Customer Profile (Nigerian Market Focus)</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Core Audiences: Interests, Behaviours & Demographics</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Custom Audiences: Website, Email List & Engagement</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Lookalike Audiences: Scaling Your Best Customers</div><div class="lesson-dur">16 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Audience Overlap & How to Avoid It</div><div class="lesson-dur">14 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">📄</div><div class="lesson-title">Audience Research Workbook</div><div class="lesson-dur">Reference</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-2">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">03</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Ad Creative & Copywriting That Converts</div>
+              <div class="module-meta">
+                <span>📹 6 lessons</span>
+                <span>⏱ 2hr 10min</span>
+                <span>🟡 Intermediate</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">The Anatomy of a High-Converting Facebook Ad</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Writing Headlines & Primary Text That Stop the Scroll</div><div class="lesson-dur">25 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Image vs Video Ads: When to Use Each</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Creating Video Ads on a Small Budget</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">25 Proven Ad Templates — Walkthrough</div><div class="lesson-dur">28 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">📄</div><div class="lesson-title">Ad Copywriting Swipe File (25 templates)</div><div class="lesson-dur">Download</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-3">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">04</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Campaign Structure & Launch Protocol</div>
+              <div class="module-meta">
+                <span>📹 5 lessons</span>
+                <span>⏱ 1hr 35min</span>
+                <span>🟡 Intermediate</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Campaign → Ad Set → Ad: The Right Structure</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Budget Setting: Daily vs Lifetime & CBO vs ABO</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Bidding Strategies Explained Simply</div><div class="lesson-dur">16 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Pre-Launch Checklist & Going Live</div><div class="lesson-dur">14 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Live Screen Recording: Launching a Real Campaign</div><div class="lesson-dur">27 min</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-4">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">05</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Conversion Funnels for Nigerian Businesses</div>
+              <div class="module-meta">
+                <span>📹 5 lessons</span>
+                <span>⏱ 1hr 50min</span>
+                <span>🟡 Intermediate</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">The 5-Stage Buyer Journey & Where Ads Fit</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">TOFU / MOFU / BOFU Campaigns Explained</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Lead Generation Funnels: WhatsApp, Forms & Landing Pages</div><div class="lesson-dur">25 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">E-commerce & Direct Sales Funnels</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Service Business Funnels: Coaches, Consultants & Agencies</div><div class="lesson-dur">25 min</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-5">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">06</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Analytics, Measurement & Optimisation</div>
+              <div class="module-meta">
+                <span>📹 5 lessons</span>
+                <span>⏱ 1hr 40min</span>
+                <span>🔴 Advanced</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">The Only Metrics That Actually Matter</div><div class="lesson-dur">16 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Reading Ads Manager: What to Act On</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">A/B Testing: How to Test Without Wasting Money</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">When to Kill an Ad, When to Scale It</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">📄</div><div class="lesson-title">Weekly Optimisation Tracker (Spreadsheet Template)</div><div class="lesson-dur">Download</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-6">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">07</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Retargeting, Retention & Repeat Sales</div>
+              <div class="module-meta">
+                <span>📹 5 lessons</span>
+                <span>⏱ 1hr 30min</span>
+                <span>🔴 Advanced</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Retargeting Strategy: Turn Browsers into Buyers</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Retargeting Sequences: 3-Day, 7-Day & 30-Day Windows</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Upsell & Cross-Sell Campaigns for Existing Customers</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Exclusion Audiences: Stop Wasting Spend on Buyers</div><div class="lesson-dur">14 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Building a 90-Day Retention Ad Sequence</div><div class="lesson-dur">16 min</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-block" id="mod-7">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-num-badge">08</div>
+            <div class="module-title-wrap">
+              <div class="module-title">Scaling & Advanced Growth Strategy</div>
+              <div class="module-meta">
+                <span>📹 5 lessons</span>
+                <span>⏱ 1hr 55min</span>
+                <span>🔴 Advanced</span>
+              </div>
+            </div>
+            <div class="module-expand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson-list">
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Horizontal vs Vertical Scaling — Which to Use When</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Duplicating & Multiplying Winning Ad Sets</div><div class="lesson-dur">18 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Managing Larger Budgets Without Performance Drop</div><div class="lesson-dur">22 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Expanding to New Markets Beyond Nigeria</div><div class="lesson-dur">20 min</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Building a Long-Term Facebook Ads Growth Engine</div><div class="lesson-dur">25 min</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUMMARY CARDS -->
+        <div class="curriculum-summary">
+          <div class="sum-card">
+            <div class="sum-num">8</div>
+            <div class="sum-label">Comprehensive modules</div>
+          </div>
+          <div class="sum-card">
+            <div class="sum-num">42</div>
+            <div class="sum-label">Video lessons</div>
+          </div>
+          <div class="sum-card">
+            <div class="sum-num">13hrs</div>
+            <div class="sum-label">Total content</div>
+          </div>
+          <div class="sum-card">
+            <div class="sum-num">6+</div>
+            <div class="sum-label">Downloadable resources</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes" id="outcomes">
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="s-tag">What You'll Be Able To Do</div>
+      <h2 class="s-h2">Concrete skills you'll leave with</h2>
+      <p class="s-sub">After completing this course, these are the exact capabilities you'll have built — applicable to your business from day one.</p>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-cell">
+        <div class="outcome-icon">🎯</div>
+        <div>
+          <h4>Build Precision Audiences</h4>
+          <p>Construct Core, Custom and Lookalike audiences that target buyers, not browsers — for any type of Nigerian business.</p>
+        </div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-icon">✍️</div>
+        <div>
+          <h4>Write Ads That Convert</h4>
+          <p>Craft headlines, body copy and calls-to-action using proven frameworks that stop scrolling and drive action.</p>
+        </div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-icon">🏗️</div>
+        <div>
+          <h4>Structure Campaigns Properly</h4>
+          <p>Set up and launch campaigns with the right structure, bidding strategy and budget allocation from day one.</p>
+        </div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-icon">🔁</div>
+        <div>
+          <h4>Run Profitable Retargeting</h4>
+          <p>Re-engage warm audiences with timed sequences that recover abandoned buyers and increase customer lifetime value.</p>
+        </div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-icon">📈</div>
+        <div>
+          <h4>Read & Act on Data</h4>
+          <p>Interpret Ads Manager metrics, identify what's underperforming, and make optimisation decisions backed by data.</p>
+        </div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-icon">🚀</div>
+        <div>
+          <h4>Scale What's Working</h4>
+          <p>Apply horizontal and vertical scaling techniques to multiply results from winning campaigns without losing performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-wrap">
+    <div class="section-header center">
+      <div class="s-tag">Student Results</div>
+      <h2 class="s-h2">Nigerian entrepreneurs who applied the curriculum</h2>
+      <p class="s-sub">These are real outcomes from business owners who enrolled and put the modules into practice.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-body">"I had spent over ₦300,000 on ads with almost no structure — boosting random posts and hoping. Module 2 on targeting alone changed everything. Within three weeks of applying the audience strategy, I was generating ₦1.2M in sales from ₦45,000 in spend. The ROI tracking worksheet in Module 6 is something I use every single week now."</p>
+        <div class="testi-result-pill">
+          <div class="result-num">26× ROI</div>
+          <div class="result-txt">On ad spend<br>in month one</div>
+        </div>
+        <div class="testi-author">
+          <div class="t-avatar ta1">CA</div>
+          <div>
+            <div class="t-name">Chinedu Adebayo</div>
+            <div class="t-role">Fashion Boutique Owner · Lagos</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-body">"The funnel module was the missing piece. I was getting traffic but had no system to convert it. After building the lead gen funnel from Module 5, my catering business went from 2–3 orders a week to 15–20. The WhatsApp integration strategy was particularly relevant — it's how Nigerians actually buy. Revenue up 500% in two months."</p>
+        <div class="testi-result-pill">
+          <div class="result-num">+500%</div>
+          <div class="result-txt">Revenue growth<br>in 60 days</div>
+        </div>
+        <div class="testi-author">
+          <div class="t-avatar ta2">AK</div>
+          <div>
+            <div class="t-name">Amina Kassim</div>
+            <div class="t-role">Catering Business Owner · Abuja</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-body">"As a business coach, I had the followers but not the system. The TOFU/MOFU/BOFU framework in Module 5, combined with the retargeting sequences from Module 7, transformed my pipeline. I now consistently bring in 12–15 qualified consultation calls per month. I've doubled my rates because I'm attracting the right clients — not just any clients."</p>
+        <div class="testi-result-pill">
+          <div class="result-num">2× rates</div>
+          <div class="result-txt">Better clients<br>consistent pipeline</div>
+        </div>
+        <div class="testi-author">
+          <div class="t-avatar ta3">BE</div>
+          <div>
+            <div class="t-name">Bisi Eze</div>
+            <div class="t-role">Business Coach · Port Harcourt</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-wrap">
+    <div class="pricing-inner">
+      <div class="pricing-left">
+        <div class="s-tag">Enrollment</div>
+        <h2>One investment.<br>Complete access.<br>Lifetime ownership.</h2>
+        <p>Pay once and own the entire course forever — including all future module updates, new lessons, and bonus resources added over time.</p>
+        <div class="include-grid">
+          <div class="incl-item">
+            <div class="incl-icon">🎥</div>
+            <h5>42 Video Lessons</h5>
+            <p>HD screencasts, walkthroughs and live recordings across 8 modules.</p>
+          </div>
+          <div class="incl-item">
+            <div class="incl-icon">📄</div>
+            <h5>6 Downloadable Resources</h5>
+            <p>Templates, trackers, swipe files and checklists for immediate use.</p>
+          </div>
+          <div class="incl-item">
+            <div class="incl-icon">👥</div>
+            <h5>Private Community</h5>
+            <p>Access to a members-only group of Nigerian entrepreneurs and ad practitioners.</p>
+          </div>
+          <div class="incl-item">
+            <div class="incl-icon">🎙️</div>
+            <h5>Weekly Live Q&A</h5>
+            <p>Monthly sessions with expert practitioners where you can ask questions directly.</p>
+          </div>
+          <div class="incl-item">
+            <div class="incl-icon">⚡</div>
+            <h5>Instant Access</h5>
+            <p>Start Module 1 within minutes of payment confirmation via Flutterwave.</p>
+          </div>
+          <div class="incl-item">
+            <div class="incl-icon">🔄</div>
+            <h5>Lifetime Updates</h5>
+            <p>All future lessons and curriculum updates included at no extra cost.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="curr-toggle">
+          <button class="curr-tab active" onclick="setPCurr('ngn',this)">₦ Naira</button>
+          <button class="curr-tab" onclick="setPCurr('ghs',this)">₵ Cedis</button>
+          <button class="curr-tab" onclick="setPCurr('usd',this)">$ USD</button>
+        </div>
+
+        <div class="p-was" id="p-was">Normal price: ₦100,000</div>
+        <div class="p-price" id="p-price">₦40,000</div>
+        <div class="p-note" id="p-note">One-time payment · You save ₦60,000</div>
+
+        <div style="font-size:13px;color:var(--muted);margin-bottom:12px;">Launch price expires in:</div>
+        <div class="countdown-row">
+          <div class="cdown-block"><div class="cdown-num" id="c-days">06</div><div class="cdown-label">Days</div></div>
+          <div class="cdown-sep">:</div>
+          <div class="cdown-block"><div class="cdown-num" id="c-hrs">18</div><div class="cdown-label">Hrs</div></div>
+          <div class="cdown-sep">:</div>
+          <div class="cdown-block"><div class="cdown-num" id="c-min">24</div><div class="cdown-label">Min</div></div>
+          <div class="cdown-sep">:</div>
+          <div class="cdown-block"><div class="cdown-num" id="c-sec">00</div><div class="cdown-label">Sec</div></div>
+        </div>
+
+        <button class="enroll-cta" onclick="openModal()">
+          Enroll Now & Get Instant Access
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="secure-row">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secured by Flutterwave · Cards, Bank Transfer, USSD, Mobile Money
+        </div>
+
+        <div class="pricing-features">
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>8 modules · 42 lessons · 13hrs of content</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>25 proven ad copy templates (swipe file)</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Campaign structure & audience research workbooks</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Weekly optimisation tracker spreadsheet</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Private community + weekly live Q&A sessions</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="#00c97a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Lifetime access + all future updates included</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="s-tag">Common Questions</div>
+      <h2 class="s-h2">Before you enroll</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do I access the course after paying?<div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Immediately after your Flutterwave payment is confirmed, you'll receive an email with your login credentials to the secure member portal. You can begin watching from Module 1 within minutes, 24/7 on any device.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need prior experience with Facebook Ads?<div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">No. Module 1 covers the complete foundation — Business Manager setup, account structure, and the Pixel — from scratch. The course is designed to take you from zero to advanced systematically, so beginners and intermediate advertisers both benefit significantly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this relevant to my type of Nigerian business?<div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Yes. Module 5 specifically covers distinct funnel strategies for e-commerce, service businesses, coaches/consultants, and physical product sellers. The targeting and audience modules are built around Nigerian market behaviour, including WhatsApp-centric buyer journeys.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">My ad budget is small. Can I still apply this?<div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Completely. The course teaches you to maximise ROI at any budget size. Multiple students started with ₦5,000–₦10,000 per week. The strategies are designed to produce results first, then scale — you don't need a large budget to begin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How long will it take to complete the course?<div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">The total video content is approximately 13 hours. At a pace of 1 hour per day, you can complete the full curriculum in two weeks. However, most students begin implementing from Module 2 onwards and see results before finishing the course.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the refund policy?<div class="faq-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Due to the immediate digital delivery of all course materials upon payment, we do not offer refunds. We encourage you to review the full curriculum above, the student results, and the FAQ carefully before enrolling to ensure this course fits your needs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="section-wrap">
+    <h2>The curriculum is here.<br>The strategy is proven.<br><span>The only question is you.</span></h2>
+    <p>2,847 Nigerian entrepreneurs have already enrolled and are running smarter, more profitable Facebook ad campaigns. Your turn.</p>
+    <button class="btn-cta" style="margin:0 auto;font-size:18px;padding:18px 44px" onclick="openModal()">
+      Enroll in Facebook Ads Mastery
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <div class="logo-badge">📘</div>
+    Facebook Ads Mastery
+  </div>
+  <p>© 2025 Facebook Ads Mastery. All rights reserved.</p>
+  <p>Payments secured by <strong style="color:rgba(255,255,255,0.6)">Flutterwave</strong></p>
+</footer>
+
+<!-- ENROLLMENT MODAL -->
+<div class="modal-bg" id="modal" onclick="handleBgClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Enroll Now</h2>
+    <p class="m-sub">Complete your details below and pay securely via Flutterwave. Instant access after confirmation.</p>
+
+    <div class="m-curr-row">
+      <div class="m-curr active" onclick="setMCurr(this,'ngn')">
+        <div class="m-curr-code">NGN</div>
+        <div class="m-curr-amt">₦40,000</div>
+      </div>
+      <div class="m-curr" onclick="setMCurr(this,'ghs')">
+        <div class="m-curr-code">GHS</div>
+        <div class="m-curr-amt">₵350</div>
+      </div>
+      <div class="m-curr" onclick="setMCurr(this,'usd')">
+        <div class="m-curr-code">USD</div>
+        <div class="m-curr-amt">$43</div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>Full Name</label>
+      <input type="text" id="m-name" placeholder="Your full name" autocomplete="name">
+    </div>
+    <div class="form-row">
+      <label>Email Address</label>
+      <input type="email" id="m-email" placeholder="your@email.com" autocomplete="email">
+    </div>
+    <div class="form-row">
+      <label>Phone Number</label>
+      <input type="tel" id="m-phone" placeholder="+234 800 000 0000" autocomplete="tel">
+    </div>
+
+    <button class="pay-now" id="pay-btn" onclick="initiatePayment()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Pay Securely via Flutterwave
+    </button>
+
+    <div class="fw-badge">🔒 Secured by Flutterwave · Cards · Bank Transfer · USSD · Mobile Money</div>
+  </div>
+</div>
+
+<script>
+// ── Currency config ──
+const CURR = {
+  ngn: { code:'NGN', symbol:'₦', amount:40000, display:'₦40,000', was:'Normal price: ₦100,000', note:'One-time payment · You save ₦60,000' },
+  ghs: { code:'GHS', symbol:'₵', amount:350,   display:'₵350',    was:'Normal price: ₵850',    note:'One-time payment · You save ₵500' },
+  usd: { code:'USD', symbol:'$', amount:43,    display:'$43',     was:'Normal price: $108',    note:'One-time payment · You save $65' },
+};
+let selCurr = 'ngn';
+
+// Pricing section toggle
+function setPCurr(c, el) {
+  selCurr = c;
+  document.querySelectorAll('.curr-tab').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('p-price').textContent = CURR[c].display;
+  document.getElementById('p-was').textContent   = CURR[c].was;
+  document.getElementById('p-note').textContent  = CURR[c].note;
+}
+
+// Modal currency
+function setMCurr(el, c) {
+  selCurr = c;
+  document.querySelectorAll('.m-curr').forEach(r => r.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Modal
+function openModal() {
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleBgClick(e) {
+  if (e.target === document.getElementById('modal')) closeModal();
+}
+
+// Module accordion
+function toggleModule(header) {
+  const block = header.parentElement;
+  const isOpen = block.classList.contains('open');
+  document.querySelectorAll('.module-block').forEach(b => b.classList.remove('open'));
+  if (!isOpen) block.classList.add('open');
+}
+
+// Scroll to module
+function scrollToModule(idx) {
+  const el = document.getElementById('mod-' + idx);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => {
+      if (!el.classList.contains('open')) toggleModule(el.querySelector('.module-header'));
+    }, 400);
+  }
+  document.querySelectorAll('.c-nav-item').forEach((n, i) => n.classList.toggle('active', i === idx));
+}
+
+// FAQ accordion
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Countdown
+(function() {
+  const target = new Date();
+  target.setDate(target.getDate() + 6);
+  target.setHours(18, 24, 0, 0);
+  const pad = n => String(n).padStart(2,'0');
+  function tick() {
+    const d = target - Date.now();
+    if (d <= 0) return;
+    document.getElementById('c-days').textContent = pad(Math.floor(d/86400000));
+    document.getElementById('c-hrs').textContent  = pad(Math.floor((d%86400000)/3600000));
+    document.getElementById('c-min').textContent  = pad(Math.floor((d%3600000)/60000));
+    document.getElementById('c-sec').textContent  = pad(Math.floor((d%60000)/1000));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// Flutterwave payment
+function initiatePayment() {
+  const name  = document.getElementById('m-name').value.trim();
+  const email = document.getElementById('m-email').value.trim();
+  const phone = document.getElementById('m-phone').value.trim();
+
+  if (!name || !email || !phone) { alert('Please fill in all fields.'); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email.'); return; }
+
+  const btn = document.getElementById('pay-btn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Opening payment…';
+
+  const c = CURR[selCurr];
+
+  FlutterwaveCheckout({
+    // ⚠️ Replace with your real Flutterwave public key from dashboard.flutterwave.com → Settings → API Keys
+    public_key: "FLWPUBK_TEST-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-X",
+    tx_ref: "FBAM-" + Date.now(),
+    amount: c.amount,
+    currency: c.code,
+    payment_options: "card, banktransfer, ussd, mobilemoney",
+    customer: { email, phone_number: phone, name },
+    customizations: {
+      title: "Facebook Ads Mastery",
+      description: "Complete course — 8 modules, 42 lessons, lifetime access",
+      logo: "",
+    },
+    callback(data) {
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Pay Securely via Flutterwave';
+      if (data.status === "successful" || data.status === "completed") {
+        closeModal();
+        const courseLink = "https://drive.google.com/drive/folders/1tzCUdivGCjFkODuBTOcl5PI6SlAxR1TN?usp=drive_link";
+        document.body.innerHTML = `
+          <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#080e1a;font-family:'Instrument Sans',sans-serif;text-align:center;padding:40px;">
+            <div style="max-width:600px;width:100%;">
+              <div style="width:80px;height:80px;background:rgba(0,201,122,0.12);border:1px solid rgba(0,201,122,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 32px">✅</div>
+              <h1 style="font-family:'Syne',sans-serif;font-size:48px;font-weight:800;letter-spacing:-2px;color:#fff;margin-bottom:16px;">Payment Confirmed!</h1>
+              <p style="font-size:18px;color:#7a8ba8;line-height:1.7;margin-bottom:36px">
+                Welcome to <strong style="color:#e8edf5">Facebook Ads Mastery</strong>, ${name}. Your course is ready. Click the button below to access all 8 modules right now.
+              </p>
+
+              <a href="${courseLink}" target="_blank"
+                style="display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#1a6bff;color:white;text-decoration:none;padding:20px 40px;border-radius:14px;font-family:'Syne',sans-serif;font-weight:700;font-size:20px;letter-spacing:-0.3px;box-shadow:0 0 60px rgba(26,107,255,0.4);margin-bottom:16px;transition:all 0.2s;width:100%">
+                📘 Access Your Course Now →
+              </a>
+              <p style="font-size:13px;color:#4d8dff;margin-bottom:40px">Opens your Google Drive course folder in a new tab</p>
+
+              <div style="background:#0d1626;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px;margin-bottom:20px;text-align:left">
+                <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#4d8dff;margin-bottom:16px">📋 Your Enrollment Details</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                  <div>
+                    <div style="font-size:12px;color:#7a8ba8;margin-bottom:4px">Name</div>
+                    <div style="font-size:14px;color:#e8edf5;font-weight:600">${name}</div>
+                  </div>
+                  <div>
+                    <div style="font-size:12px;color:#7a8ba8;margin-bottom:4px">Email</div>
+                    <div style="font-size:14px;color:#e8edf5;font-weight:600">${email}</div>
+                  </div>
+                  <div>
+                    <div style="font-size:12px;color:#7a8ba8;margin-bottom:4px">Transaction Ref</div>
+                    <div style="font-family:monospace;font-size:13px;color:#7a8ba8">${data.transaction_id || data.tx_ref}</div>
+                  </div>
+                  <div>
+                    <div style="font-size:12px;color:#7a8ba8;margin-bottom:4px">Access</div>
+                    <div style="font-size:14px;color:#00c97a;font-weight:600">✓ Lifetime</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:rgba(245,200,66,0.06);border:1px solid rgba(245,200,66,0.2);border-radius:12px;padding:18px 20px;text-align:left">
+                <div style="font-size:13px;color:#f5c842;font-weight:600;margin-bottom:6px">📌 Save this page or bookmark your course link</div>
+                <div style="font-size:13px;color:#7a8ba8;line-height:1.6">Your course link: <span style="color:#4d8dff;word-break:break-all">${courseLink}</span></div>
+              </div>
+            </div>
+          </div>`;
+      } else {
+        alert("Payment was not completed. Please try again.");
+      }
+    },
+    onclose() {
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Pay Securely via Flutterwave';
+    }
+  });
+}
+</script>
+</body>
+</html>
