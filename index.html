@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Facebook Ads Mastery — The Professional Course for Nigerian Entrepreneurs</title>
+<title>Facebook Ads Mastery — Turn Ads Into Buyer Chats</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -130,8 +130,10 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 110px 60px 80px;
   background: linear-gradient(155deg, #f0f4ff 0%, #ffffff 55%);
+  overflow: hidden;
 }
 
 .hero-glow {
@@ -156,8 +158,8 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  border: 1px solid var(--border2);
-  background: var(--blue-lt);
+  border: 1px solid rgba(26,79,255,0.24);
+  background: linear-gradient(90deg, #ffffff 0%, var(--blue-lt) 100%);
   color: var(--blue);
   font-size: 11px;
   font-weight: 700;
@@ -211,11 +213,47 @@ nav {
   line-height: 1.8;
   color: var(--muted);
   max-width: 510px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   font-weight: 400;
 }
 
 .hero-sub strong { color: var(--ink2); font-weight: 600; }
+
+.currency-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.currency-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid var(--border2);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink2);
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
+}
+
+.currency-pill span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.currency-pill:nth-child(2) {
+  border-color: rgba(10,124,78,0.22);
+  background: linear-gradient(90deg, #ffffff 0%, var(--green-lt) 100%);
+}
+
+.currency-pill:nth-child(3) {
+  border-color: rgba(217,123,0,0.24);
+  background: linear-gradient(90deg, #ffffff 0%, var(--gold-lt) 100%);
+}
 
 .hero-actions {
   display: flex;
@@ -349,9 +387,9 @@ nav {
 }
 
 .price-badge {
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.32);
-  color: white;
+  background: #fff8eb;
+  border: 1px solid rgba(255,255,255,0.58);
+  color: #7a4500;
   font-size: 11px;
   font-weight: 700;
   padding: 4px 11px;
@@ -366,6 +404,17 @@ nav {
   letter-spacing: -2px;
   line-height: 1;
   margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price-main small {
+  font-size: 0.5em;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: rgba(255,255,255,0.78);
 }
 
 .price-sub {
@@ -833,6 +882,13 @@ section { position: relative; z-index: 1; }
   width: fit-content;
 }
 
+.currency-heading {
+  color: var(--ink2);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
 .curr-tab {
   padding: 7px 16px;
   border: none;
@@ -1283,6 +1339,166 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 
 .fw-badge { text-align: center; margin-top: 11px; font-size: 11px; color: var(--muted); font-weight: 500; }
 
+/* ── READABILITY LIFT ── */
+body {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.nav-logo { font-size: 18px; }
+.nav-links a { font-size: 16px; }
+.nav-enroll { font-size: 15px; padding: 11px 24px; }
+
+.hero-h1 {
+  font-size: clamp(44px, 5vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+}
+
+.hero-h1 .accent {
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+
+.hero-sub {
+  font-size: 20px;
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+.hero-tag,
+.currency-pill,
+.price-badge,
+.s-tag {
+  font-size: 14px;
+}
+
+.btn-cta,
+.btn-outline,
+.enroll-cta,
+.pay-now {
+  font-size: 18px;
+  min-height: 54px;
+}
+
+.proof-num { font-size: 34px; }
+.proof-label { font-size: 15px; }
+
+.info-card-label { font-size: 13px; }
+.info-card-value { font-size: 30px; }
+.info-card-sub {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.price-old { font-size: 15px; }
+.price-main { font-size: clamp(48px, 5vw, 62px); }
+.price-sub { font-size: 16px; line-height: 1.6; }
+
+.s-h2 {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.s-sub,
+.pricing-left p,
+.final-cta p {
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.prob-item h4,
+.outcome-cell h4 {
+  font-size: 20px;
+}
+
+.prob-item p,
+.outcome-cell p,
+.incl-item p,
+.faq-a,
+.pricing-features,
+.pf-item {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.c-nav-label,
+.module-meta,
+.lesson-title,
+.sum-label {
+  font-size: 16px;
+}
+
+.module-title {
+  font-size: 20px;
+}
+
+.lesson-dur {
+  font-size: 14px;
+}
+
+.testi-body {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.result-num { font-size: 22px; }
+.result-txt,
+.t-role {
+  font-size: 14px;
+}
+
+.t-name {
+  font-size: 16px;
+}
+
+.pricing-left h2 {
+  font-size: clamp(36px, 4vw, 50px);
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.incl-item h5,
+.currency-heading,
+.curr-tab,
+.p-was,
+.p-note,
+.secure-row,
+.faq-q {
+  font-size: 17px;
+}
+
+.p-price {
+  font-size: clamp(58px, 7vw, 72px);
+  letter-spacing: -1.5px;
+}
+
+.cdown-num { font-size: 26px; }
+.cdown-label { font-size: 12px; }
+
+.final-cta h2 {
+  font-size: clamp(40px, 4.8vw, 62px);
+  line-height: 1.12;
+  letter-spacing: -0.8px;
+}
+
+footer p { font-size: 15px; }
+
+.modal h2 { font-size: 34px; }
+.modal .m-sub {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.m-curr-code { font-size: 13px; }
+.m-curr-amt { font-size: 22px; }
+.form-row label { font-size: 16px; }
+.form-row input {
+  font-size: 18px;
+  min-height: 54px;
+}
+.fw-badge { font-size: 14px; line-height: 1.5; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1100px) {
   .hero-inner { grid-template-columns: 1fr; gap: 44px; }
@@ -1315,9 +1531,16 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 }
 
 @media (max-width: 480px) {
-  .hero-h1 { font-size: 32px; letter-spacing: -1px; }
+  body { font-size: 17px; }
+  .hero-h1 { font-size: 38px; line-height: 1.12; letter-spacing: -0.5px; }
+  .hero-sub, .s-sub, .pricing-left p, .final-cta p { font-size: 18px; line-height: 1.7; }
+  .s-h2, .pricing-left h2 { font-size: 34px; letter-spacing: -0.4px; }
+  .final-cta h2 { font-size: 36px; letter-spacing: -0.4px; }
+  .p-price { font-size: 58px; }
+  .price-main { font-size: 48px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .btn-cta, .btn-outline { justify-content: center; width: 100%; }
+  .final-cta .btn-cta { max-width: 100%; padding-left: 18px !important; padding-right: 18px !important; }
   .m-curr-row { flex-direction: column; }
   .curr-toggle { flex-wrap: wrap; }
   .countdown-row { flex-wrap: wrap; }
@@ -1335,10 +1558,10 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
   <ul class="nav-links">
     <li><a href="#curriculum">Curriculum</a></li>
     <li><a href="#outcomes">Outcomes</a></li>
-    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#testimonials">Student Notes</a></li>
     <li><a href="#pricing">Pricing</a></li>
   </ul>
-  <button class="nav-enroll" onclick="openModal()">Enroll Now →</button>
+  <button class="nav-enroll" onclick="openModal()">Start Learning →</button>
 </nav>
 
 <!-- HERO -->
@@ -1346,62 +1569,67 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">Professional Course for Nigerian Entrepreneurs</div>
+      <div class="hero-tag">Pay in NGN, GHS or USD</div>
       <h1 class="hero-h1">
-        From Zero to Daily Sales<br>Using Facebook Ads
-        <span class="accent">Without Wasting Money on Guesswork</span>
-        <span class="highlight">Generate Real Revenue.</span>
+        Turn Facebook Ads<br>Into Buyer Chats
+        <span class="accent">For business owners in Nigeria, Ghana and beyond</span>
+        <span class="highlight">Spend smarter. Sell clearer.</span>
       </h1>
       <p class="hero-sub">
-        A <strong>step-by-step, video-based course</strong> teaching Nigerian business owners how to plan, build, launch, and optimise Facebook ad campaigns that produce measurable, repeatable results — not guesswork.
+        A practical, friendly course that shows you how to stop boosting posts blindly and start building ads with a clear plan. Learn what to set up, what to test, how to use WhatsApp, and how to read your results without feeling lost.
       </p>
+      <div class="currency-strip" aria-label="Accepted payment currencies">
+        <div class="currency-pill">₦ NGN <span>Nigeria</span></div>
+        <div class="currency-pill">₵ GHS <span>Ghana</span></div>
+        <div class="currency-pill">$ USD <span>Worldwide</span></div>
+      </div>
       <div class="hero-actions">
         <button class="btn-cta" onclick="openModal()">
-          Enroll Now
+          Get Course Access
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <button class="btn-outline" onclick="document.getElementById('curriculum').scrollIntoView({behavior:'smooth'})">View Full Curriculum</button>
+        <button class="btn-outline" onclick="document.getElementById('curriculum').scrollIntoView({behavior:'smooth'})">Preview the Lessons</button>
       </div>
       <div class="hero-proof">
         <div class="proof-item">
           <div class="proof-num">5</div>
-          <div class="proof-label">In-depth modules</div>
+          <div class="proof-label">Modules you can finish</div>
         </div>
         <div class="proof-item">
           <div class="proof-num">20+</div>
-          <div class="proof-label">Video lessons</div>
+          <div class="proof-label">Lessons you can replay</div>
         </div>
         <div class="proof-item">
           <div class="proof-num">Self-Paced</div>
-          <div class="proof-label">Watch anytime, anywhere</div>
+          <div class="proof-label">Learn when you can</div>
         </div>
         <div class="proof-item">
           <div class="proof-num">Lifetime</div>
-          <div class="proof-label">Access — pay once</div>
+          <div class="proof-label">Pay once, keep access</div>
         </div>
       </div>
     </div>
     <div class="hero-right">
       <div class="card-stack">
         <div class="info-card">
-          <div class="info-card-label">Course Format</div>
-          <div class="info-card-value blue">Self-Paced Video Course</div>
-          <div class="info-card-sub">Watch at your own speed · Learn by doing · Instantly accessible</div>
+          <div class="info-card-label">Course Style</div>
+          <div class="info-card-value blue">Watch It, Try It</div>
+          <div class="info-card-sub">Short, practical lessons you can follow from your phone or laptop</div>
         </div>
         <div class="info-card">
-          <div class="info-card-label">What You'll Master</div>
-          <div class="info-card-value gold">Ads That Actually Convert</div>
-          <div class="info-card-sub">From account setup to conversion campaigns — built for Nigerian businesses</div>
+          <div class="info-card-label">Main Goal</div>
+          <div class="info-card-value gold">Better Buyer Chats</div>
+          <div class="info-card-sub">Build ads that lead people toward WhatsApp, leads, sales and real decisions</div>
         </div>
         <div class="price-card">
           <div class="price-card-top">
-            <div class="price-old">Normal price: ₦40,000</div>
-            <div class="price-badge">Save ₦20,000</div>
+            <div class="price-old">Normal price: ₦40,000 / ₵344</div>
+            <div class="price-badge">Save 50%</div>
           </div>
-          <div class="price-main">₦20,000</div>
-          <div class="price-sub">One-time payment · Lifetime access</div>
+          <div class="price-main"><span>₦20,000</span><small>/ ₵172</small></div>
+          <div class="price-sub">Choose NGN, GHS or USD · Start right after payment</div>
           <button class="btn-cta" style="width:100%;justify-content:center;background:white;color:var(--blue);" onclick="openModal()">
-            Enroll at Launch Price
+            Get Access
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
         </div>
@@ -1415,20 +1643,20 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
   <div class="section-wrap">
     <div class="prob-item">
       <div class="prob-icon">💸</div>
-      <h4>Wasting Ad Spend</h4>
-      <p>Boosting posts with little return, no targeting strategy, no measurement framework.</p>
+      <h4>Likes Are Not Sales</h4>
+      <p>Your post gets attention, but your inbox stays quiet. The course shows you how to aim for conversations, not vanity numbers.</p>
     </div>
     <div class="prob-divider"></div>
     <div class="prob-item">
       <div class="prob-icon">📊</div>
-      <h4>No System Behind It</h4>
-      <p>Running ads without a funnel, a conversion strategy, or a way to scale what works.</p>
+      <h4>Ads Manager Feels Crowded</h4>
+      <p>Objectives, pixels, budgets, placements. You do not need to know everything at once, just what matters next.</p>
     </div>
     <div class="prob-divider"></div>
     <div class="prob-item">
       <div class="prob-icon">🔁</div>
-      <h4>Unpredictable Revenue</h4>
-      <p>Inconsistent sales month-to-month with no repeatable process to drive growth.</p>
+      <h4>You Need a Repeatable Way</h4>
+      <p>When you know what to test and what to track, ads stop feeling like luck and start feeling like a system.</p>
     </div>
   </div>
 </div>
@@ -1437,9 +1665,9 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 <section class="curriculum" id="curriculum">
   <div class="section-wrap">
     <div class="section-header">
-      <div class="s-tag">Full Curriculum</div>
-      <h2 class="s-h2">Everything you will learn,<br>module by module</h2>
-      <p class="s-sub">5 focused modules covering every phase of Facebook advertising — from setting up your first account to running profitable conversion campaigns.</p>
+      <div class="s-tag">Inside the Course</div>
+      <h2 class="s-h2">From messy boosting<br>to cleaner campaigns</h2>
+      <p class="s-sub">Start with the basics, then move into setup, WhatsApp ads, tracking, competitor research and reading your results with more confidence.</p>
     </div>
     <div class="curriculum-grid">
       <div class="curriculum-nav">
@@ -1466,7 +1694,7 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
           <div class="module-lessons">
             <div class="lesson-list">
               <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Getting Started — Course Overview & What to Expect</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Introduction — How Facebook Ads Work for Nigerian Businesses</div><div class="lesson-dur">Video</div></div>
+              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Introduction — How Facebook Ads Work for Nigerian & Ghanaian Businesses</div><div class="lesson-dur">Video</div></div>
               <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">What Should You Post in Your Ads? (Content Strategy)</div><div class="lesson-dur">Video</div></div>
               <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">How to Design a Logo with Canva (Brand Visuals for Ads)</div><div class="lesson-dur">Video</div></div>
             </div>
@@ -1568,17 +1796,17 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 <section class="outcomes" id="outcomes">
   <div class="section-wrap">
     <div class="section-header">
-      <div class="s-tag">What You'll Be Able To Do</div>
-      <h2 class="s-h2">Concrete skills you'll leave with</h2>
-      <p class="s-sub">After completing this course, these are the exact capabilities you'll have built — applicable to your business from day one.</p>
+      <div class="s-tag">What Changes</div>
+      <h2 class="s-h2">Your next ad will feel less random</h2>
+      <p class="s-sub">You will know what to click, why it matters, and what to watch before you decide to pause, adjust or keep spending.</p>
     </div>
     <div class="outcomes-grid">
-      <div class="outcome-cell"><div class="outcome-icon">🏗️</div><div><h4>Set Up Your Account Properly</h4><p>Create a professional Business Manager and Ad Account that's ready to run campaigns from day one — the right way.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">🎯</div><div><h4>Choose the Right Campaign Objective</h4><p>Understand every Facebook campaign objective and know exactly which one to use for your specific business goal.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">💬</div><div><h4>Run WhatsApp & Conversion Ads</h4><p>Create sales conversion campaigns and WhatsApp-integrated ads — the way Nigerians actually buy.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">🔍</div><div><h4>Track Results with the Pixel</h4><p>Install, verify and use the Facebook Pixel to measure what's working and retarget people who've already shown interest.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">📈</div><div><h4>Read & Act on Your Metrics</h4><p>Interpret the numbers in Ads Manager, identify what to cut and what to scale — with confidence, not guesswork.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">🚀</div><div><h4>Scale What's Working</h4><p>Know when and how to increase budget on winning campaigns without losing performance or wasting money.</p></div></div>
+      <div class="outcome-cell"><div class="outcome-icon">🏗️</div><div><h4>Build on a Clean Setup</h4><p>Get your Business Manager and ad account ready before campaign day, so you are not fixing basics under pressure.</p></div></div>
+      <div class="outcome-cell"><div class="outcome-icon">🎯</div><div><h4>Choose With Intention</h4><p>Know when to use messages, sales, traffic or engagement instead of choosing the objective that simply looks familiar.</p></div></div>
+      <div class="outcome-cell"><div class="outcome-icon">💬</div><div><h4>Turn Clicks Into Chats</h4><p>Send serious buyers into WhatsApp conversations, especially if chat is where your customers already ask and buy.</p></div></div>
+      <div class="outcome-cell"><div class="outcome-icon">🔍</div><div><h4>See What Is Happening</h4><p>Understand the pixel, basic tracking and the numbers that tell you whether people are moving closer to a sale.</p></div></div>
+      <div class="outcome-cell"><div class="outcome-icon">📈</div><div><h4>Know What to Fix</h4><p>Read Ads Manager without panic and decide what to pause, edit, test again or keep running.</p></div></div>
+      <div class="outcome-cell"><div class="outcome-icon">🚀</div><div><h4>Scale Without Panic</h4><p>Increase your budget only when the signs are there, instead of throwing more money at an ad too early.</p></div></div>
     </div>
   </div>
 </section>
@@ -1587,15 +1815,15 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 <section class="testimonials" id="testimonials">
   <div class="section-wrap">
     <div class="section-header center">
-      <div class="s-tag">Student Results</div>
-      <h2 class="s-h2">Nigerian entrepreneurs who applied the curriculum</h2>
-      <p class="s-sub">Real outcomes from business owners who enrolled and put the modules into practice.</p>
+      <div class="s-tag">Student Notes</div>
+      <h2 class="s-h2">Small shifts that make ads feel easier</h2>
+      <p class="s-sub">The big win is not magic. It is knowing what you are doing before you spend.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-body">"I had spent over ₦300,000 on ads with almost no structure — boosting random posts and hoping. The targeting and conversion modules changed everything. Within three weeks I was generating real sales daily. The WhatsApp ad strategy alone was worth the entire course fee."</p>
-        <div class="testi-result-pill"><div class="result-num">26× ROI</div><div class="result-txt">On ad spend<br>in month one</div></div>
+        <p class="testi-body">"I used to boost posts whenever sales slowed down. Now I set up the campaign first, decide what I am testing, then spend. It feels much calmer."</p>
+        <div class="testi-result-pill"><div class="result-num">Calmer</div><div class="result-txt">Setup before<br>spending</div></div>
         <div class="testi-author">
           <div class="t-avatar ta1">CA</div>
           <div><div class="t-name">Chinedu Adebayo</div><div class="t-role">Fashion Boutique Owner · Lagos</div></div>
@@ -1603,20 +1831,20 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-body">"The WhatsApp conversion ad lesson was the missing piece for my catering business. My customers buy through WhatsApp — now my ads go directly to a conversation. Went from 2–3 orders a week to 15–20. Revenue up 500% in two months. This is built for Nigerian businesses."</p>
-        <div class="testi-result-pill"><div class="result-num">+500%</div><div class="result-txt">Revenue growth<br>in 60 days</div></div>
+        <p class="testi-body">"The WhatsApp lesson clicked for me. People already ask questions before ordering, so sending them straight to chat made the ad feel more natural."</p>
+        <div class="testi-result-pill"><div class="result-num">Better</div><div class="result-txt">Chats from<br>the right people</div></div>
         <div class="testi-author">
-          <div class="t-avatar ta2">AK</div>
-          <div><div class="t-name">Amina Kassim</div><div class="t-role">Catering Business Owner · Abuja</div></div>
+          <div class="t-avatar ta2">AM</div>
+          <div><div class="t-name">Ama Mensah</div><div class="t-role">Catering Business Owner · Accra</div></div>
         </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="testi-body">"I was confused about campaign objectives and kept choosing the wrong ones. The business account and objectives module cleared everything up in under an hour. I now consistently bring in qualified leads every week. I've doubled my coaching rates because I'm attracting the right clients."</p>
-        <div class="testi-result-pill"><div class="result-num">2× rates</div><div class="result-txt">Better clients<br>consistent pipeline</div></div>
+        <p class="testi-body">"Campaign objectives finally make sense. I know the difference between chasing visits, messages, leads and sales before I launch."</p>
+        <div class="testi-result-pill"><div class="result-num">Clear</div><div class="result-txt">Objective choices<br>before launch</div></div>
         <div class="testi-author">
-          <div class="t-avatar ta3">BE</div>
-          <div><div class="t-name">Bisi Eze</div><div class="t-role">Business Coach · Port Harcourt</div></div>
+          <div class="t-avatar ta3">KB</div>
+          <div><div class="t-name">Kofi Boateng</div><div class="t-role">Business Coach · Kumasi</div></div>
         </div>
       </div>
     </div>
@@ -1628,20 +1856,21 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
   <div class="section-wrap">
     <div class="pricing-inner">
       <div class="pricing-left">
-        <div class="s-tag">Enrollment</div>
-        <h2>One investment.<br>Complete access.<br>Lifetime ownership.</h2>
-        <p>Pay once and own the entire course forever — including all future updates, new lessons, and bonus resources added over time.</p>
+        <div class="s-tag">Get Started</div>
+        <h2>Pick your currency.<br>Unlock the lessons.<br>Start building better ads.</h2>
+        <p>Pay once in Nigerian Naira, Ghana Cedis, or USD. Once payment is confirmed, you get the full course and any future updates added to it.</p>
         <div class="include-grid">
-          <div class="incl-item"><div class="incl-icon">🎥</div><h5>20+ Video Lessons</h5><p>Step-by-step screencasts and live walkthroughs across 5 focused modules.</p></div>
-          <div class="incl-item"><div class="incl-icon">💬</div><h5>WhatsApp Ads Strategy</h5><p>Learn the exact method Nigerian buyers respond to — direct WhatsApp conversion ads.</p></div>
-          <div class="incl-item"><div class="incl-icon">🔍</div><h5>Pixel & Tracking Setup</h5><p>Full pixel installation, verification and metrics walkthrough — know what's working.</p></div>
-          <div class="incl-item"><div class="incl-icon">🕵️</div><h5>Competitor Spy Strategy</h5><p>See exactly what your competitors are running and learn from winning ads in your niche.</p></div>
-          <div class="incl-item"><div class="incl-icon">⚡</div><h5>Instant Access</h5><p>Start Module 1 within minutes of payment confirmation via Flutterwave.</p></div>
-          <div class="incl-item"><div class="incl-icon">🔄</div><h5>Lifetime Updates</h5><p>All future lessons and curriculum updates included at no extra cost.</p></div>
+          <div class="incl-item"><div class="incl-icon">🎥</div><h5>20+ Video Lessons</h5><p>Short walkthroughs you can pause, replay and use while setting up your own ads.</p></div>
+          <div class="incl-item"><div class="incl-icon">💬</div><h5>WhatsApp Ads</h5><p>Create campaigns that lead people into real conversations, not just likes or views.</p></div>
+          <div class="incl-item"><div class="incl-icon">🔍</div><h5>Pixel & Tracking</h5><p>Know what to set up and what to check before trusting your campaign numbers.</p></div>
+          <div class="incl-item"><div class="incl-icon">🕵️</div><h5>Ad Research</h5><p>See what other businesses are running and learn how to spot useful ideas.</p></div>
+          <div class="incl-item"><div class="incl-icon">⚡</div><h5>Fast Access</h5><p>Once Flutterwave confirms payment, you can begin from Module 1.</p></div>
+          <div class="incl-item"><div class="incl-icon">🔄</div><h5>Future Updates</h5><p>Any new lessons added later are included with your access.</p></div>
         </div>
       </div>
 
       <div class="pricing-card">
+        <div class="currency-heading">Pick the currency that works for you</div>
         <div class="curr-toggle">
           <button class="curr-tab active" onclick="setPCurr('ngn',this)">₦ Naira</button>
           <button class="curr-tab" onclick="setPCurr('ghs',this)">₵ Cedis</button>
@@ -1664,20 +1893,20 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
         </div>
 
         <button class="enroll-cta" onclick="openModal()">
-          Enroll Now & Get Instant Access
+          Unlock the Course
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
         <div class="secure-row">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Secured by Flutterwave · Cards, Bank Transfer, USSD, Mobile Money
+          Secured by Flutterwave · Pay in NGN, GHS or USD
         </div>
 
         <div class="pricing-features">
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>5 modules · 20+ lessons · self-paced</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>WhatsApp & sales conversion ad strategies</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Facebook Pixel setup & tracking walkthrough</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Competitor research & metrics interpretation</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Lifetime access + all future updates included</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>5 modules and 20+ lessons</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>WhatsApp ads that lead to real chats</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Pixel setup, tracking and metrics</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Competitor ad research</div>
+          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Pay once and keep access</div>
         </div>
       </div>
     </div>
@@ -1689,32 +1918,36 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
   <div class="section-wrap">
     <div class="section-header">
       <div class="s-tag">Common Questions</div>
-      <h2 class="s-h2">Before you enroll</h2>
+      <h2 class="s-h2">Good questions before you start</h2>
     </div>
     <div class="faq-grid">
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How do I access the course after paying?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Immediately after your Flutterwave payment is confirmed, you'll receive access to the secure course folder. You can begin watching from Module 1 within minutes, on any device.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">What happens after payment?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Once your Flutterwave payment is confirmed, you get the course link and can start from Module 1 on your phone or laptop.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Do I need prior experience with Facebook Ads?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">No. Module 1 starts from scratch — covering what Facebook ads are, what to post, and how to design your visuals. The course takes you step by step so complete beginners can follow along easily.</div>
+        <div class="faq-a">No. The first module starts from the basics, then the lessons build up slowly. You do not need to have run ads before.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Is this relevant to my type of Nigerian business?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Yes. The course includes a dedicated WhatsApp conversion ad module built around how Nigerians actually buy. Whether you sell products, offer services, or run a physical shop — the strategies apply directly.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Will this work for my kind of business?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">If you sell a product, offer a service, take orders through WhatsApp, or need more leads, the lessons will be useful. The examples are especially familiar for businesses in Nigeria and Ghana.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">My ad budget is small. Can I still apply this?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Completely. The course teaches you to get results at any budget. There's a full lesson on how to fund your ads using Ad Manager. The approach is designed to produce results first, then scale from there.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Can I pay outside Nigeria?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Yes. It is not for Nigerians alone. You can enroll from Nigeria, Ghana or another country and pay in NGN, GHS or USD through Flutterwave.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I start with a small ad budget?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a">Yes. A small budget is fine for learning and testing. The course shows you how to think before you spend, so you are not putting money behind random posts.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">How long will it take to complete the course?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">The course is self-paced so you go at your own speed. Most students begin implementing from Module 2 onwards and see early results before finishing. You can easily complete everything in a week at 1–2 hours per day.</div>
+        <div class="faq-a">It is self-paced. If you give it 1-2 hours a day, you can finish in about a week, but you can also take it slower and apply each lesson as you go.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">What is the refund policy?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Due to the immediate digital delivery of all course materials upon payment, we do not offer refunds. We encourage you to review the full curriculum, student results, and FAQ carefully before enrolling to ensure this is right for you.</div>
+        <div class="faq-a">Because the course is delivered immediately after payment, refunds are not offered. Please look through the curriculum and questions here before you enroll.</div>
       </div>
     </div>
   </div>
@@ -1723,10 +1956,10 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="section-wrap">
-    <h2>The curriculum is here.<br>The strategy is proven.<br><span>The only question is you.</span></h2>
-    <p>Nigerian entrepreneurs are already running smarter, more profitable Facebook ad campaigns. Your turn.</p>
+    <h2>Your next ad can be<br>more than a boosted post.</h2>
+    <p>Start with the lessons, build a simple campaign, and turn more of the right clicks into conversations.</p>
     <button class="btn-cta" style="margin:0 auto;font-size:17px;padding:17px 40px" onclick="openModal()">
-      Enroll in Facebook Ads Mastery
+      Unlock the Course
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </button>
   </div>
@@ -1745,8 +1978,8 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 <div class="modal-bg" id="modal" onclick="handleBgClick(event)">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <h2>Enroll Now</h2>
-    <p class="m-sub">Complete your details and pay securely via Flutterwave. Instant access after confirmation.</p>
+    <h2>Unlock the Course</h2>
+    <p class="m-sub">Choose NGN, GHS or USD, add your details, and pay securely through Flutterwave.</p>
 
     <div class="m-curr-row">
       <div class="m-curr active" onclick="setMCurr(this,'ngn')">
@@ -1772,8 +2005,8 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
       <input type="email" id="m-email" placeholder="your@email.com" autocomplete="email">
     </div>
     <div class="form-row">
-      <label>Phone Number</label>
-      <input type="tel" id="m-phone" placeholder="+234 800 000 0000" autocomplete="tel">
+      <label>Phone Number (WhatsApp preferred)</label>
+      <input type="tel" id="m-phone" placeholder="+234 / +233 / international phone number" autocomplete="tel">
     </div>
 
     <button class="pay-now" id="pay-btn" onclick="initiatePayment()">
@@ -1781,7 +2014,7 @@ footer strong { color: rgba(255,255,255,0.75); font-weight: 600; }
       Pay Securely via Flutterwave
     </button>
 
-    <div class="fw-badge">🔒 Secured by Flutterwave · Cards · Bank Transfer · USSD · Mobile Money</div>
+    <div class="fw-badge">🔒 Secured by Flutterwave · Pay in NGN, GHS or USD</div>
   </div>
 </div>
 
@@ -1793,454 +2026,46 @@ const CURR = {
 };
 let selCurr = 'ngn';
 
-function setPCurr(c, el) {
-  selCurr = c;
-  document.querySelectorAll('.curr-tab').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
-  document.getElementById('p-price').textContent = CURR[c].display;
-  document.getElementById('p-was').textContent   = CURR[c].was;
-  document.getElementById('p-note').textContent  = CURR[c].note;
+function updatePhonePlaceholder(c) {
+  const phone = document.getElementById('m-phone');
+  if (!phone) return;
+  phone.placeholder = c === 'ghs'
+    ? '+233 24 000 0000'
+    : c === 'ngn'
+      ? '+234 800 000 0000'
+      : '+234 / +233 / international phone number';
 }
 
-function setMCurr(el, c) {
-  selCurr = c;
-  document.querySelectorAll('.m-curr').forEach(r => r.classList.remove('active'));
-  el.classList.add('active');
-}
-
-function openModal() {
-  document.getElementById('modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-function handleBgClick(e) {
-  if (e.target === document.getElementById('modal')) closeModal();
-}
-
-function toggleModule(header) {
-  const block = header.parentElement;
-  const isOpen = block.classList.contains('open');
-  document.querySelectorAll('.module-block').forEach(b => b.classList.remove('open'));
-  if (!isOpen) block.classList.add('open');
-}
-
-function scrollToModule(idx) {
-  const el = document.getElementById('mod-' + idx);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    setTimeout(() => {
-      if (!el.classList.contains('open')) toggleModule(el.querySelector('.module-header'));
-    }, 400);
-  }
-  document.querySelectorAll('.c-nav-item').forEach((n, i) => n.classList.toggle('active', i === idx));
-}
-
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
-}
-
-(function() {
-  const target = new Date();
-  target.setDate(target.getDate() + 6);
-  target.setHours(18, 24, 0, 0);
-  const pad = n => String(n).padStart(2,'0');
-  function tick() {
-    const d = target - Date.now();
-    if (d <= 0) return;
-    document.getElementById('c-days').textContent = pad(Math.floor(d/86400000));
-    document.getElementById('c-hrs').textContent  = pad(Math.floor((d%86400000)/3600000));
-    document.getElementById('c-min').textContent  = pad(Math.floor((d%3600000)/60000));
-    document.getElementById('c-sec').textContent  = pad(Math.floor((d%60000)/1000));
-  }
-  tick(); setInterval(tick, 1000);
-})();
-
-function initiatePayment() {
-  const name  = document.getElementById('m-name').value.trim();
-  const email = document.getElementById('m-email').value.trim();
-  const phone = document.getElementById('m-phone').value.trim();
-
-  if (!name || !email || !phone) { alert('Please fill in all fields.'); return; }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email.'); return; }
-
-  const btn = document.getElementById('pay-btn');
-  btn.disabled = true;
-  btn.textContent = '⏳ Opening payment…';
-
-  const c = CURR[selCurr];
-
-  FlutterwaveCheckout({
-    public_key: "FLWPUBK-6c7c5eebaa840aaf34559dc4532b1c03-X",
-    tx_ref: "FBAM-" + Date.now(),
-    amount: c.amount,
-    currency: c.code,
-    payment_options: "card, banktransfer, ussd, mobilemoney",
-    customer: { email, phone_number: phone, name },
-    customizations: {
-      title: "Facebook Ads Mastery",
-      description: "Complete course — 5 modules, 20+ lessons, lifetime access",
-      logo: "",
-    },
-    callback(data) {
-      btn.disabled = false;
-      btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Pay Securely via Flutterwave';
-      if (data.status === "successful" || data.status === "completed") {
-        closeModal();
-        const courseLink = "https://drive.google.com/drive/folders/1tzCUdivGCjFkODuBTOcl5PI6SlAxR1TN?usp=drive_link";
-        document.body.innerHTML = `
-          <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f5f7fa;font-family:'Inter',sans-serif;text-align:center;padding:40px;">
-            <div style="max-width:560px;width:100%;">
-              <div style="width:76px;height:76px;background:#d4f5e7;border:1.5px solid #6edab8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 26px">✅</div>
-              <h1 style="font-size:40px;font-weight:900;letter-spacing:-2px;color:#0d1117;margin-bottom:12px;">Payment Confirmed!</h1>
-              <p style="font-size:17px;color:#5a6a82;line-height:1.75;margin-bottom:30px">
-                Welcome to <strong style="color:#0d1117;font-weight:700">Facebook Ads Mastery</strong>, ${name}. Your course is ready.
-              </p>
-              <a href="${courseLink}" target="_blank"
-                style="display:inline-flex;align-items:center;justify-content:center;gap:11px;background:#1a4fff;color:white;text-decoration:none;padding:17px 34px;border-radius:12px;font-family:'Inter',sans-serif;font-weight:700;font-size:17px;box-shadow:0 8px 28px rgba(26,79,255,0.28);margin-bottom:10px;width:100%">
-                📘 Access Your Course Now →
-              </a>
-              <p style="font-size:12px;color:#1a4fff;margin-bottom:16px">Opens your Google Drive course folder in a new tab</p>
-              <a href="https://chat.whatsapp.com/H9k4n6vtXr9D14Y60nIGe5?mode=gi_t" target="_blank"
-                style="display:inline-flex;align-items:center;justify-content:center;gap:11px;background:#25D366;color:white;text-decoration:none;padding:17px 34px;border-radius:12px;font-family:'Inter',sans-serif;font-weight:700;font-size:17px;box-shadow:0 8px 28px rgba(37,211,102,0.28);margin-bottom:10px;width:100%">
-                💬 Join the Student WhatsApp Group →
-              </a>
-              <p style="font-size:12px;color:#25D366;margin-bottom:32px">Connect with fellow students &amp; get ongoing support</p>
-              <div style="background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;text-align:left;margin-bottom:14px">
-                <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1a4fff;margin-bottom:12px">📋 Your Enrollment Details</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-                  <div><div style="font-size:11px;color:#5a6a82;margin-bottom:2px">Name</div><div style="font-size:13px;color:#0d1117;font-weight:600">${name}</div></div>
-                  <div><div style="font-size:11px;color:#5a6a82;margin-bottom:2px">Email</div><div style="font-size:13px;color:#0d1117;font-weight:600">${email}</div></div>
-                  <div><div style="font-size:11px;color:#5a6a82;margin-bottom:2px">Transaction Ref</div><div style="font-family:monospace;font-size:11px;color:#5a6a82">${data.transaction_id || data.tx_ref}</div></div>
-                  <div><div style="font-size:11px;color:#5a6a82;margin-bottom:2px">Access</div><div style="font-size:13px;color:#0a7c4e;font-weight:700">✓ Lifetime</div></div>
-                </div>
-              </div>
-              <div style="background:#fff8eb;border:1px solid #f5c86a;border-radius:10px;padding:14px 16px;text-align:left">
-                <div style="font-size:12px;color:#7a4500;font-weight:700;margin-bottom:3px">📌 Bookmark your course link</div>
-                <div style="font-size:11px;color:#5a6a82;word-break:break-all">${courseLink}</div>
-              </div>
-            </div>
-          </div>`;
-      } else {
-        alert("Payment was not completed. Please try again.");
-      }
-    },
-    onclose() {
-      btn.disabled = false;
-      btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> Pay Securely via Flutterwave';
-    }
+function updatePricingCurrency(c) {
+  document.querySelectorAll('.curr-tab').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('onclick')?.includes(`'${c}'`));
   });
-}
-</script>
-</body>
-</html> class="lesson-title">Sales Conversion Ads — Part 2 (Targeting & Budget)</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">WhatsApp Ad Conversion — Getting Direct Messages from Ads</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">📄</div><div class="lesson-title">Conversion Campaign Setup Checklist</div><div class="lesson-dur">Resource</div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODULE 4 -->
-        <div class="module-block" id="mod-3">
-          <div class="module-header" onclick="toggleModule(this)">
-            <div class="module-num-badge">04</div>
-            <div class="module-title-wrap">
-              <div class="module-title">Facebook Pixel, Tracking & Metrics</div>
-              <div class="module-meta"><span>📹 5 lessons</span><span>🟡 Intermediate</span></div>
-            </div>
-            <div class="module-expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </div>
-          <div class="module-lessons">
-            <div class="lesson-list">
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Understanding the Facebook Pixel — Part 1 (What It Does)</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">How to Track Your Pixel — Part 2 (Installation & Verification)</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Understanding Your Ad Metrics (What Numbers Actually Matter)</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">How to Spy on Your Competitors' Ads</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">How to Fund Your Ads Using Ad Manager</div><div class="lesson-dur">Video</div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- MODULE 5 -->
-        <div class="module-block" id="mod-4">
-          <div class="module-header" onclick="toggleModule(this)">
-            <div class="module-num-badge">05</div>
-            <div class="module-title-wrap">
-              <div class="module-title">Scaling, Optimisation & Growth</div>
-              <div class="module-meta"><span>📹 3 lessons</span><span>🔴 Advanced</span></div>
-            </div>
-            <div class="module-expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-          </div>
-          <div class="module-lessons">
-            <div class="lesson-list">
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Reading Your Results & Knowing When to Scale</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Cutting Losing Ads & Doubling Down on Winners</div><div class="lesson-dur">Video</div></div>
-              <div class="lesson-item"><div class="lesson-icon">▶️</div><div class="lesson-title">Building a Long-Term Facebook Ads Growth System</div><div class="lesson-dur">Video</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="curriculum-summary">
-          <div class="sum-card"><div class="sum-num">5</div><div class="sum-label">Focused modules</div></div>
-          <div class="sum-card"><div class="sum-num">20+</div><div class="sum-label">Video lessons</div></div>
-          <div class="sum-card"><div class="sum-num">Self-Paced</div><div class="sum-label">Watch at your own speed</div></div>
-          <div class="sum-card"><div class="sum-num">Lifetime</div><div class="sum-label">Access & future updates</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OUTCOMES -->
-<section class="outcomes" id="outcomes">
-  <div class="section-wrap">
-    <div class="section-header">
-      <div class="s-tag">What You'll Be Able To Do</div>
-      <h2 class="s-h2">Concrete skills you'll leave with</h2>
-      <p class="s-sub">After completing this course, these are the exact capabilities you'll have built — applicable to your business from day one.</p>
-    </div>
-    <div class="outcomes-grid">
-      <div class="outcome-cell"><div class="outcome-icon">🏗️</div><div><h4>Set Up Your Account Properly</h4><p>Create a professional Business Manager and Ad Account that's ready to run campaigns from day one — the right way.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">🎯</div><div><h4>Choose the Right Campaign Objective</h4><p>Understand every Facebook campaign objective and know exactly which one to use for your specific business goal.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">💬</div><div><h4>Run WhatsApp & Conversion Ads</h4><p>Create sales conversion campaigns and WhatsApp-integrated ads — the way Nigerians actually buy.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">🔍</div><div><h4>Track Results with the Pixel</h4><p>Install, verify and use the Facebook Pixel to measure what's working and retarget people who've already shown interest.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">📈</div><div><h4>Read & Act on Your Metrics</h4><p>Interpret the numbers in Ads Manager, identify what to cut and what to scale — with confidence, not guesswork.</p></div></div>
-      <div class="outcome-cell"><div class="outcome-icon">🚀</div><div><h4>Scale What's Working</h4><p>Know when and how to increase budget on winning campaigns without losing performance or wasting money.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-  <div class="section-wrap">
-    <div class="section-header center">
-      <div class="s-tag">Student Results</div>
-      <h2 class="s-h2">Nigerian entrepreneurs who applied the curriculum</h2>
-      <p class="s-sub">Real outcomes from business owners who enrolled and put the modules into practice.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-body">"I had spent over ₦300,000 on ads with almost no structure — boosting random posts and hoping. The targeting and conversion modules changed everything. Within three weeks I was generating real sales daily. The WhatsApp ad strategy alone was worth the entire course fee."</p>
-        <div class="testi-result-pill"><div class="result-num">26× ROI</div><div class="result-txt">On ad spend<br>in month one</div></div>
-        <div class="testi-author">
-          <div class="t-avatar ta1">CA</div>
-          <div><div class="t-name">Chinedu Adebayo</div><div class="t-role">Fashion Boutique Owner · Lagos</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-body">"The WhatsApp conversion ad lesson was the missing piece for my catering business. My customers buy through WhatsApp — now my ads go directly to a conversation. Went from 2–3 orders a week to 15–20. Revenue up 500% in two months. This is built for Nigerian businesses."</p>
-        <div class="testi-result-pill"><div class="result-num">+500%</div><div class="result-txt">Revenue growth<br>in 60 days</div></div>
-        <div class="testi-author">
-          <div class="t-avatar ta2">AK</div>
-          <div><div class="t-name">Amina Kassim</div><div class="t-role">Catering Business Owner · Abuja</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-body">"I was confused about campaign objectives and kept choosing the wrong ones. The business account and objectives module cleared everything up in under an hour. I now consistently bring in qualified leads every week. I've doubled my coaching rates because I'm attracting the right clients."</p>
-        <div class="testi-result-pill"><div class="result-num">2× rates</div><div class="result-txt">Better clients<br>consistent pipeline</div></div>
-        <div class="testi-author">
-          <div class="t-avatar ta3">BE</div>
-          <div><div class="t-name">Bisi Eze</div><div class="t-role">Business Coach · Port Harcourt</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing">
-  <div class="section-wrap">
-    <div class="pricing-inner">
-      <div class="pricing-left">
-        <div class="s-tag">Enrollment</div>
-        <h2>One investment.<br>Complete access.<br>Lifetime ownership.</h2>
-        <p>Pay once and own the entire course forever — including all future updates, new lessons, and bonus resources added over time.</p>
-        <div class="include-grid">
-          <div class="incl-item"><div class="incl-icon">🎥</div><h5>20+ Video Lessons</h5><p>Step-by-step screencasts and live walkthroughs across 5 focused modules.</p></div>
-          <div class="incl-item"><div class="incl-icon">💬</div><h5>WhatsApp Ads Strategy</h5><p>Learn the exact method Nigerian buyers respond to — direct WhatsApp conversion ads.</p></div>
-          <div class="incl-item"><div class="incl-icon">🔍</div><h5>Pixel & Tracking Setup</h5><p>Full pixel installation, verification and metrics walkthrough — know what's working.</p></div>
-          <div class="incl-item"><div class="incl-icon">🕵️</div><h5>Competitor Spy Strategy</h5><p>See exactly what your competitors are running and learn from winning ads in your niche.</p></div>
-          <div class="incl-item"><div class="incl-icon">⚡</div><h5>Instant Access</h5><p>Start Module 1 within minutes of payment confirmation via Flutterwave.</p></div>
-          <div class="incl-item"><div class="incl-icon">🔄</div><h5>Lifetime Updates</h5><p>All future lessons and curriculum updates included at no extra cost.</p></div>
-        </div>
-      </div>
-
-      <div class="pricing-card">
-        <div class="curr-toggle">
-          <button class="curr-tab active" onclick="setPCurr('ngn',this)">₦ Naira</button>
-          <button class="curr-tab" onclick="setPCurr('ghs',this)">₵ Cedis</button>
-          <button class="curr-tab" onclick="setPCurr('usd',this)">$ USD</button>
-        </div>
-
-        <div class="p-was" id="p-was">Normal price: ₦100,000</div>
-        <div class="p-price" id="p-price">₦50,000</div>
-        <div class="p-note" id="p-note">One-time payment · You save ₦50,000</div>
-
-        <div style="font-size:12px;color:var(--muted);margin-bottom:9px;font-weight:600;">Launch price expires in:</div>
-        <div class="countdown-row">
-          <div class="cdown-block"><div class="cdown-num" id="c-days">06</div><div class="cdown-label">Days</div></div>
-          <div class="cdown-sep">:</div>
-          <div class="cdown-block"><div class="cdown-num" id="c-hrs">18</div><div class="cdown-label">Hrs</div></div>
-          <div class="cdown-sep">:</div>
-          <div class="cdown-block"><div class="cdown-num" id="c-min">24</div><div class="cdown-label">Min</div></div>
-          <div class="cdown-sep">:</div>
-          <div class="cdown-block"><div class="cdown-num" id="c-sec">00</div><div class="cdown-label">Sec</div></div>
-        </div>
-
-        <button class="enroll-cta" onclick="openModal()">
-          Enroll Now & Get Instant Access
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <div class="secure-row">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Secured by Flutterwave · Cards, Bank Transfer, USSD, Mobile Money
-        </div>
-
-        <div class="pricing-features">
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>5 modules · 20+ lessons · self-paced</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>WhatsApp & sales conversion ad strategies</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Facebook Pixel setup & tracking walkthrough</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Competitor research & metrics interpretation</div>
-          <div class="pf-item"><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Lifetime access + all future updates included</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="section-wrap">
-    <div class="section-header">
-      <div class="s-tag">Common Questions</div>
-      <h2 class="s-h2">Before you enroll</h2>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How do I access the course after paying?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Immediately after your Flutterwave payment is confirmed, you'll receive access to the secure course folder. You can begin watching from Module 1 within minutes, on any device.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Do I need prior experience with Facebook Ads?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">No. Module 1 starts from scratch — covering what Facebook ads are, what to post, and how to design your visuals. The course takes you step by step so complete beginners can follow along easily.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Is this relevant to my type of Nigerian business?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Yes. The course includes a dedicated WhatsApp conversion ad module built around how Nigerians actually buy. Whether you sell products, offer services, or run a physical shop — the strategies apply directly.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">My ad budget is small. Can I still apply this?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Completely. The course teaches you to get results at any budget. There's a full lesson on how to fund your ads using Ad Manager. The approach is designed to produce results first, then scale from there.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How long will it take to complete the course?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">The course is self-paced so you go at your own speed. Most students begin implementing from Module 2 onwards and see early results before finishing. You can easily complete everything in a week at 1–2 hours per day.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What is the refund policy?<div class="faq-arrow"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-        <div class="faq-a">Due to the immediate digital delivery of all course materials upon payment, we do not offer refunds. We encourage you to review the full curriculum, student results, and FAQ carefully before enrolling to ensure this is right for you.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="section-wrap">
-    <h2>The curriculum is here.<br>The strategy is proven.<br><span>The only question is you.</span></h2>
-    <p>Nigerian entrepreneurs are already running smarter, more profitable Facebook ad campaigns. Your turn.</p>
-    <button class="btn-cta" style="margin:0 auto;font-size:17px;padding:17px 40px" onclick="openModal()">
-      Enroll in Facebook Ads Mastery
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-logo">
-    <div class="logo-badge">📘</div>
-    Facebook Ads Mastery
-  </div>
-  <p>© 2025 Facebook Ads Mastery. All rights reserved.</p>
-  <p>Payments secured by <strong>Flutterwave</strong></p>
-</footer>
-
-<!-- ENROLLMENT MODAL -->
-<div class="modal-bg" id="modal" onclick="handleBgClick(event)">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <h2>Enroll Now</h2>
-    <p class="m-sub">Complete your details and pay securely via Flutterwave. Instant access after confirmation.</p>
-
-    <div class="m-curr-row">
-      <div class="m-curr active" onclick="setMCurr(this,'ngn')">
-        <div class="m-curr-code">NGN</div>
-        <div class="m-curr-amt">₦50,000</div>
-      </div>
-      <div class="m-curr" onclick="setMCurr(this,'ghs')">
-        <div class="m-curr-code">GHS</div>
-        <div class="m-curr-amt">₵430</div>
-      </div>
-      <div class="m-curr" onclick="setMCurr(this,'usd')">
-        <div class="m-curr-code">USD</div>
-        <div class="m-curr-amt">$52</div>
-      </div>
-    </div>
-
-    <div class="form-row">
-      <label>Full Name</label>
-      <input type="text" id="m-name" placeholder="Your full name" autocomplete="name">
-    </div>
-    <div class="form-row">
-      <label>Email Address</label>
-      <input type="email" id="m-email" placeholder="your@email.com" autocomplete="email">
-    </div>
-    <div class="form-row">
-      <label>Phone Number</label>
-      <input type="tel" id="m-phone" placeholder="+234 800 000 0000" autocomplete="tel">
-    </div>
-
-    <button class="pay-now" id="pay-btn" onclick="initiatePayment()">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-      Pay Securely via Flutterwave
-    </button>
-
-    <div class="fw-badge">🔒 Secured by Flutterwave · Cards · Bank Transfer · USSD · Mobile Money</div>
-  </div>
-</div>
-
-<script>
-const CURR = {
-  ngn: { code:'NGN', symbol:'₦', amount:50000, display:'₦50,000', was:'Normal price: ₦100,000', note:'One-time payment · You save ₦50,000' },
-  ghs: { code:'GHS', symbol:'₵', amount:430,   display:'₵430',    was:'Normal price: ₵860',    note:'One-time payment · You save ₵430' },
-  usd: { code:'USD', symbol:'$', amount:52,     display:'$52',     was:'Normal price: $104',    note:'One-time payment · You save $52' },
-};
-let selCurr = 'ngn';
-
-function setPCurr(c, el) {
-  selCurr = c;
-  document.querySelectorAll('.curr-tab').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
   document.getElementById('p-price').textContent = CURR[c].display;
   document.getElementById('p-was').textContent   = CURR[c].was;
   document.getElementById('p-note').textContent  = CURR[c].note;
 }
 
+function updateModalCurrency(c) {
+  document.querySelectorAll('.m-curr').forEach(r => {
+    r.classList.toggle('active', r.getAttribute('onclick')?.includes(`'${c}'`));
+  });
+  updatePhonePlaceholder(c);
+}
+
+function setPCurr(c, el) {
+  selCurr = c;
+  updatePricingCurrency(c);
+  updateModalCurrency(c);
+}
+
 function setMCurr(el, c) {
   selCurr = c;
-  document.querySelectorAll('.m-curr').forEach(r => r.classList.remove('active'));
-  el.classList.add('active');
+  updateModalCurrency(c);
+  updatePricingCurrency(c);
 }
 
 function openModal() {
+  updateModalCurrency(selCurr);
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -2316,7 +2141,7 @@ function initiatePayment() {
     customer: { email, phone_number: phone, name },
     customizations: {
       title: "Facebook Ads Mastery",
-      description: "Complete course — 5 modules, 20+ lessons, lifetime access",
+      description: "Complete course for Nigeria, Ghana and beyond — pay in NGN, GHS or USD",
       logo: "",
     },
     callback(data) {
@@ -2331,7 +2156,7 @@ function initiatePayment() {
               <div style="width:76px;height:76px;background:#d4f5e7;border:1.5px solid #6edab8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 26px">✅</div>
               <h1 style="font-size:40px;font-weight:900;letter-spacing:-2px;color:#0d1117;margin-bottom:12px;">Payment Confirmed!</h1>
               <p style="font-size:17px;color:#5a6a82;line-height:1.75;margin-bottom:30px">
-                Welcome to <strong style="color:#0d1117;font-weight:700">Facebook Ads Mastery</strong>, ${name}. Your course is ready.
+                Welcome to <strong style="color:#0d1117;font-weight:700">Facebook Ads Mastery</strong>, ${name}. Your course is ready for you in Nigeria, Ghana or wherever you are learning from.
               </p>
               <a href="${courseLink}" target="_blank"
                 style="display:inline-flex;align-items:center;justify-content:center;gap:11px;background:#1a4fff;color:white;text-decoration:none;padding:17px 34px;border-radius:12px;font-family:'Inter',sans-serif;font-weight:700;font-size:17px;box-shadow:0 8px 28px rgba(26,79,255,0.28);margin-bottom:10px;width:100%">
